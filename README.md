@@ -1,4 +1,4 @@
-<h3> 🔵 Criador de botões personalizados dinâmicos </h3>
+<h3> 🔵 Criador de button's personalizados em tempo real </h3>
 <br>
 <hr>
 <h4>🎬 GIF </h4>
