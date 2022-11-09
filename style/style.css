@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(248, 248, 248);
+}
+main{
+    margin: 0 auto;
+    width: 50%;
+}
+/*menu*/
+.logo{
+    position: absolute;
+    color: #fff;
+    font-weight: lighter;
+    padding: 1.8rem;
+    margin-left: 5%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+.logo:hover{
+    font-weight: lighter;
+    color:#02F052;
+}
+.menu{
+    display: flex;
+    justify-content: end;
+    background-color: #444;
+    padding: 1.9rem;
+    box-sizing: border-box;
+}
+.menu li{
+    list-style-type: none;
+    margin-right: 2rem;
+}
+.menu li a{
+    background-color: #333;
+    padding: .7rem;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: monospace;
+    transition: 1s;
+}
+.menu li a:hover{
+    color: #000;
+    background-color: #fff;
+}
+#me a{
+    background-color: #444;
+    border: 1px solid #fff;
+    transition: .5s;
+}
+#me a:hover{
+    color: #02F052;
+}
+/*form*/
+label{
+    display: block;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    font-weight: lighter;
+    color: #000;
+    font-family: 'Courier New', Courier, monospace;
+}
+label::before{
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #555;
+    margin-right: .4rem;
+}
+select{
+    margin-top: 1rem;
+}
+.sec-form{
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    grid-gap: 30px;/*distancia de uma grid pra outra (grid form e grid resultado)*/
+    padding: 30px;
+    margin-top: 2rem;
+}
+.controles{
+    font-family: cursive;
+    background-color: #eee;
+    border-radius: 4px;
+    box-shadow: 0 0 .2rem 0 #222;
+    padding: 2rem;
+}
+
+/*resultado*/
+.resultado{
+    margin-top: 10%;
+}
+.css{
+    display: flex;
+    flex-direction: column;
+}
+.code{
+    display: block;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.code:hover{
+    background-color: rgb(245, 244, 244);
+}
+.botao{
+    display: block;
+}
+.title{
+    color:#12ca50;
+    font-size: 1.8rem;
+}
+.botao-gerado{
+    margin-top: 5rem;
+}
+/*inputs*/
+input{
+    margin-top: 1rem;
+}
+.texto{
+    padding: .4rem .5rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    color: #777;
+    border: 1px solid #000;
+}
+.range{
+    appearance: none;
+    outline: none;
+    -webkit-appearance: none;
+}
+.rage::-ms-range-thumb{
+    background-color: blue;
+    border-radius: 5px;
+}
+.rage::-moz-range-thumb{
+    background-color: blue;
+}
+select {
+    width: 10rem;
+    height: 2rem;
+    font-size: 1rem;
+    color: rgb(37, 43, 38);
+    font-weight: bolder;
+}
+#fontFamily{
+    display: block;
+}
+hr{
+    max-width: 14rem;
+    margin-bottom: 2rem;
+}
+/*footer*/
+footer{
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    background-color: #555;
+    padding: 1rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+footer p{
+    color: #fff;
+    font-weight: lighter;
+}
+.contact{
+    color: #fff;
+    font-weight: bolder;
+}
+.contact:hover{
+    color:rgb(86, 189, 248);
+}
+.dominio{
+    color: #26fc6d;
+    cursor: pointer;
+    opacity: 0.5;
+}
+.dominio:hover{
+    opacity: 1;
+}
+/*animation*/
+@keyframes blink{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+/*media query*/
+@media (max-width: 860px){
+    .menu{
+        display: block;
+        width: 100%;
+        right: 0;
+        background-color: #444;
+    }
+    .menu li{
+        margin-top: 3rem;
+    }
+    .logo{
+        padding: 0;
+        margin-top: 1rem;
+    }
+    main{
+        width: 100%;
+    }
+    .sec-form{
+        grid-template-columns: 250px 1fr;
+        padding: 0;
+        grid-gap: 10px;
+    }
+    .texto{
+        max-width: 100%;
+    }
+}

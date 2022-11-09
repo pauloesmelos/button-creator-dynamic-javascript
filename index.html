@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ptr-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="paulo melos">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="descriptions" content="criador de botões - button creator com javascript, projeto frontend, paulo melos">
+        <meta name="keywords" content="criador de botões,button gerator, javascript, frontend, github, paulo melos">
+        <link rel="stylesheet" href="./style/style.css">
+        <title>Button Creator Online</title>
+    </head>
+
+    <body>
+        <header>
+            <nav class="menu-nav">
+                <div class="logo">
+                    <h2>Button Creator Dynamic</h2>
+                </div>
+                <ul class="menu">
+                    <li><a href="https://github.com/pauloesmelos/dynamic-button-creator-javascrit" target="_blank">Repository</a></li>
+                    <li><a href="https://www.linkedin.com/in/pauloeduardomelos/" target="_blank">Linkedin</a></li>
+                    <li id="me"><a href="https://github.com/pauloesmelos/pauloesmelos" target="_blank">About me :)</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="sec-form">
+                <form class="controles" id="controles">
+                    <label for="text">Text</label>
+                    <input type="text" name="text" id="text" class="texto">
+
+                    <label for="">Color text</label>
+                    <input type="color" name="color" id="color">
+
+                    <label for="">Background-color</label>
+                    <input type="color" name="backgroundColor" id="backgroundColor">
+
+                    <label for="height">Height <span class="number1 range"></span>(px)</label>
+                    <input type="range" name="height" id="height" max="200">
+
+                    <label for="width">Width <span class="number2 range"></span>(px)</label>
+                    <input type="range" name="width" id="width" max="200">
+
+                    <label for="border">Border(1px solid #fff),(none)</label>
+                    <input type="text" name="border" id="border" class="texto">
+
+                    <label for="borderRadius">Border-radius <span class="number3 range"></span>(px)</label>
+                    <input type="range" name="borderRadius" id="borderRadius">
+
+                    <label for="fontSize">Font-size<span ></span>(px)</label>
+                    <input type="number" name="fontSize" id="fontSize" min="1" class="texto">
+
+                    <label for="fontFamily">Font-family</label>
+                    <select id="fontFamily" name="fontFamily">
+                        <option value="Arial">Arial</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="monospace">Monospace</option>
+                        <option value="cursive">Cursive</option>
+                    </select>         
+                </form>
+
+                <section class="resultado">
+                    <pre><!--preformatar o texto, capturando todos espaços e formatações do HTML!!-->
+                        <code class="css">
+                            <h1 class="title codigo">Código CSS</h1>
+                            <hr>
+                            <span class="code">
+                               
+                            </span>
+                            <div class="botao-gerado">
+                                <h1 class="title">Your Button</h1>
+                                <button class="botao">Clique</button>
+                            </div>
+                        </code>
+                    </pre>
+                </section>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2022 desenvolvido por paulo melos | <span class="dominio">Button Creator Dynamic</span> | <a href="https://github.com/pauloesmelos" class="contact" target="_blank">Contact</a></p>
+        </footer>
+        <script src="./script/script.js"></script>
+    </body>
+</html>
