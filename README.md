@@ -8,3 +8,4 @@
 <img src="https://user-images.githubusercontent.com/74941958/200728582-575c3d12-1e1d-4ac2-961b-1315ac7c8f86.png">
 <br>
 <hr>
+<h2> ♾️ - Entre outros: acesse a <a href="https://pauloesmelos.github.io/button-creator-dynamic-javascript/">página</a></h2>
