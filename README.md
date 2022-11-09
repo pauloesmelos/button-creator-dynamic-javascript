@@ -6,4 +6,5 @@
 <br>
 <h4>📷 RESULTADO FINAL + CÓDIGO CSS</h4>
 <img src="https://user-images.githubusercontent.com/74941958/200728582-575c3d12-1e1d-4ac2-961b-1315ac7c8f86.png">
-
+<br>
+<hr>
