@@ -49,16 +49,17 @@ form.addEventListener('change',setCode);
 function getvalue(event){
     values[event.target.name](event.target.value);//passagem de valor via parametro do método
     setPixels(event);
+    console.log(event.target.value);
+    setValues(event.target.name,event.target.value);
 }
 function setPixels(event){
     event.target === height ? n1.innerText = event.target.value : undefined;
     event.target === width ? n2.innerText = event.target.value : undefined;
     event.target === border_radius ? n3.innerText = event.target.value : undefined;
 }
-function setCode(event){
+function setCode(){
     let text = values.element.style.cssText.split('; ').join(';\n');
-    console.log(text);
-    event.target.name !== 'text' ? code.innerHTML = text : undefined;/*cssText pega TODO css do elemento!!*/
+    code.innerHTML = text;/*cssText pega TODO css do elemento!!*/
 }
 /*hover personalizado: */
 newButton.addEventListener('mouseover',hover);
@@ -81,3 +82,44 @@ letters.forEach((e,i) => {
         logo.innerText += e;
     },150 * i);
 });
+
+/*save with local storage*/
+function setValues(name,value){
+    localStorage[name] = value;
+}
+/*set style on button*/
+function setStyle(){
+   let chaves = Object.keys(localStorage);
+   chaves.forEach((e) => {
+        console.log('valor da key: ',localStorage[e]);
+        values[e](localStorage[e]);     
+   });
+   setCode();
+}
+setStyle();
+
+let btn_clear = document.querySelector('[data-clear]');
+btn_clear.addEventListener('click',removeValues);
+function removeValues(){
+    localStorage.clear();
+}
+
+/*tooltip*/
+btn_clear.addEventListener('mouseover',tooltip);
+function tooltip(event){
+    let div = createTooltip(event);
+    this.addEventListener('mouseleave',() => {
+        div.remove();
+    });
+}
+function createTooltip(event){
+    let div = document.createElement('div');
+    div.innerText = 'A sua personalização não ficará mais salva caso feche o browser';
+    div.classList.add('tooltip');
+    document.body.append(div);
+    //console.log(btn_clear.offsetLeft);
+    //console.log(btn_clear.offsetTop);
+    div.style.left = btn_clear.offsetLeft + 'px';
+    div.style.top = btn_clear.offsetTop + 100 + 'px';
+    return div;
+}

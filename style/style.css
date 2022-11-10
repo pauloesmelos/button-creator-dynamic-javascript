@@ -159,6 +159,20 @@ hr{
     max-width: 14rem;
     margin-bottom: 2rem;
 }
+[data-clear]{
+    background-color: rgb(255, 110, 85);
+    color: #fff;
+    font-weight: bolder;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    padding: 1rem;
+    margin-top: 5rem;
+    border-radius: 5px;
+}
+[data-clear]:hover{
+    box-shadow: 0 0 .7rem .2rem #eb4747;
+}
 /*footer*/
 footer{
     width: 100%;
@@ -187,6 +201,30 @@ footer p{
 }
 .dominio:hover{
     opacity: 1;
+}
+/*tooltip*/
+.tooltip{
+    background-color: rgba(0,0,0,.4);
+    color: #000;
+    font-weight: bolder;
+    max-width: 30%;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 3px solid #111;
+    box-shadow: 0 0 .3rem .1rem #000;
+    position: absolute;
+}
+.tooltip::after{
+    display: inline-block;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    content: '';
+    top: -10px;
+    left: 110px;
+    border-bottom: 10px solid #000;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
 }
 /*animation*/
 @keyframes blink{
